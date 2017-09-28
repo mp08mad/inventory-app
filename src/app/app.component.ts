@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,Output } from '@angular/core';
+import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  products: Product[];
+
+  constructor(){
+  	this.products = [new Product('NYSHOES','Black running shoes','/assets/images/black-shoes.jpg',['Men','Shoes','Running shoes'],109.99),
+                      new Product('NEATOJACKET','Blue jacket','/assets/images/blue-jacket.jpg',['Women','Apparel','Jackets & vests'],239.99),
+                      new Product('NICEHAT','A nice black hat','/assets/images/black-hat.jpg',['Men','Accessories','Hats'],29.99)];
+  }
+
+  productWasSelected(product: Product): void{
+  console.log("Product clicked: ", product);
+  }
 }
