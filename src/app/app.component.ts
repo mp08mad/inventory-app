@@ -10,9 +10,9 @@ export class AppComponent {
   products: Product[];
 
   constructor(){
-  	this.products = [new Product('NYSHOES','Black running shoes','/assets/images/black-shoes.jpg',['Men','Shoes','Running shoes'],109.99),
-                      new Product('NEATOJACKET','Blue jacket','/assets/images/blue-jacket.jpg',['Women','Apparel','Jackets & vests'],239.99),
-                      new Product('NICEHAT','A nice black hat','/assets/images/black-hat.jpg',['Men','Accessories','Hats'],29.99)];
+  	this.products = [new Product('NYSHOES','Black running shoes','/assets/images/products/black-shoes.jpg',['Men','Shoes','Running shoes'],109.99),
+                      new Product('NEATOJACKET','Blue jacket','/assets/images/products/blue-jacket.jpg',['Women','Apparel','Jackets & vests'],239.99),
+                      new Product('NICEHAT','A nice black hat','/assets/images/products/black-hat.jpg',['Men','Accessories','Hats'],29.99)];
   }
 
   productWasSelected(product: Product): void{
